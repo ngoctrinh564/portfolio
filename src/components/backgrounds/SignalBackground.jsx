@@ -15,7 +15,7 @@ export function SignalBackground({ safeReduce, motionProps }) {
         transition={motionProps}
       />
       <motion.div
-        className="absolute left-[22%] top-[38%] h-1 w-32 rounded-full bg-amber/18"
+        className="absolute left-[22%] top-[38%] h-1 w-32 rounded-full bg-amber-400/20"
         animate={safeReduce ? undefined : { x: [0, -16, 0] }}
         transition={motionProps}
       />
@@ -26,7 +26,7 @@ export function SignalBackground({ safeReduce, motionProps }) {
       />
       <div className="absolute left-[20%] top-[18%] h-3 w-3 rounded-full bg-cyan/70" />
       <div className="absolute right-[26%] top-[24%] h-3 w-3 rounded-full bg-violet/70" />
-      <div className="absolute left-[30%] bottom-[28%] h-3 w-3 rounded-full bg-amber/70" />
+      <div className="absolute left-[30%] bottom-[28%] h-3 w-3 rounded-full bg-amber-400/70" />
       <div className="absolute left-[45%] top-[12%] h-2 w-2 rounded-full bg-slate-900/20 dark:bg-white/20" />
       <div className="absolute right-[12%] bottom-[18%] h-2 w-2 rounded-full bg-slate-900/20 dark:bg-white/20" />
     </>

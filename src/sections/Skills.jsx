@@ -9,7 +9,7 @@ export function Skills() {
 
   return (
     <Section id="capabilities" eyebrow={labels.capabilities.eyebrow} title={labels.capabilities.title}>
-      <div className="grid gap-5 lg:grid-cols-5">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {skills.map((skill, index) => {
           const Icon = skill.icon;
           return (
@@ -20,9 +20,9 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
             >
-              <GlassPanel className="group h-full rounded-[1.75rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan/30 hover:shadow-interface">
+              <GlassPanel className="group h-full rounded-[16px] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan/30 hover:shadow-interface">
                 <div className="flex items-center justify-between gap-3">
-                  <div className="grid h-12 w-12 place-items-center rounded-3xl border border-slate-200/20 bg-slate-50/80 text-cyan dark:border-white/10 dark:bg-slate-900/65">
+                  <div className="grid h-12 w-12 place-items-center rounded-[14px] border border-slate-200/20 bg-slate-50/80 text-cyan dark:border-white/10 dark:bg-slate-900/65">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <span className="font-mono text-xs text-cyan">{skill.signal}%</span>

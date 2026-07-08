@@ -10,7 +10,7 @@ export function Background() {
         transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute bottom-[-18%] right-[-10%] h-[38rem] w-[38rem] rounded-full bg-violet/18 blur-3xl"
+        className="absolute bottom-[-18%] right-[-10%] h-[38rem] w-[38rem] rounded-full bg-violet/20 blur-3xl"
         animate={{ x: [0, -90, -30, 0], y: [0, -60, -20, 0], scale: [1, 0.92, 1.08, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
       />

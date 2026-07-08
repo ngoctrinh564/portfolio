@@ -1,16 +1,19 @@
 import {
   Boxes,
   Braces,
+  ClipboardCheck,
   Database,
+  Facebook,
   Figma,
   Github,
+  GitPullRequestArrow,
   Mail,
   MapPin,
   Phone,
+  Presentation,
   ServerCog,
   TerminalSquare,
   Wrench,
-  Facebook,
 } from 'lucide-react';
 
 export const profile = {
@@ -24,10 +27,10 @@ export const profile = {
   facebook: 'https://www.facebook.com/ngoctrinh.5604',
   headline: 'Building digital experiences through code, motion, and systems thinking.',
   summary:
-    'I’m a web developer focused on building clean, responsive, and visually polished interfaces. I enjoy turning structured ideas into usable digital products with thoughtful UI, organized components, and smooth interaction.',
-  focus: 'UI systems, responsive web apps, dashboard interfaces',
-  technicalInterest: 'React, Tailwind CSS, ASP.NET Core, Oracle, SQL Server, Excel VBA',
-  workingStyle: 'Detail-oriented, visual-focused, learning by building',
+    'I am a web developer focused on building clean, responsive, and visually polished interfaces.',
+  focus: 'UI systems, responsive web apps, dashboard interfaces, product flow',
+  technicalInterest: 'React, Tailwind CSS, ASP.NET Core, Oracle, SQL Server, Excel VBA, BA / PM / PO',
+  workingStyle: 'Detail-oriented, visual-focused, structured, learning by building',
 };
 
 export const navItems = [
@@ -46,12 +49,25 @@ export const profileFacts = [
   { label: 'Working Style', value: profile.workingStyle },
 ];
 
+export const workflowSignals = [
+  { label: 'BA Lens', value: 'Requirement mapping', detail: 'User stories, acceptance criteria, process flow' },
+  { label: 'PM Track', value: 'Delivery control', detail: 'Scope, priority, risk, timeline, handoff' },
+  { label: 'PO Mindset', value: 'Product value', detail: 'Backlog, feature impact, user outcome' },
+  { label: 'UI System', value: 'Interface precision', detail: 'Responsive layout, motion, visual hierarchy' },
+];
+
 export const skills = [
   {
     group: 'Frontend Engine',
     icon: Braces,
     signal: 94,
     items: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
+  },
+  {
+    group: 'Product Strategy',
+    icon: Presentation,
+    signal: 84,
+    items: ['Business Analysis', 'User Story', 'Backlog', 'Roadmap', 'Acceptance Criteria'],
   },
   {
     group: 'Backend Module',
@@ -83,10 +99,10 @@ export const projects = [
   {
     title: 'BookStoreWebsite',
     description: {
-      en: 'A bookstore website project focused on product presentation, page structure, and polished UI.',
+      en: 'A bookstore website focused on product presentation, page structure, and polished UI.',
       vi: 'Dự án website nhà sách tập trung vào trình bày sản phẩm, cấu trúc trang và giao diện gọn gàng.',
     },
-    stack: ['HTML', 'CSS', 'JavaScript'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Product Listing'],
     role: 'Web Developer',
     status: 'Built',
     type: 'Web Project',
@@ -97,10 +113,10 @@ export const projects = [
   {
     title: 'courseproject-ltweb-gym',
     description: {
-      en: 'A gym website project emphasizing service presentation, responsive layout, and user-friendly interface structure.',
+      en: 'A gym website emphasizing service presentation, responsive layout, and user-friendly interface structure.',
       vi: 'Dự án website phòng gym nhấn mạnh trình bày dịch vụ, layout responsive và cấu trúc giao diện thân thiện.',
     },
-    stack: ['HTML', 'CSS', 'JavaScript'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Service Flow'],
     role: 'Web Developer',
     status: 'Built',
     type: 'Web Application',
@@ -111,10 +127,10 @@ export const projects = [
   {
     title: 'capital-weather-tracker',
     description: {
-      en: 'A weather tracker built for collecting and organizing weather data with clean reporting structure.',
-      vi: 'Dự án theo dõi thời tiết xây dựng để thu thập và tổ chức dữ liệu thời tiết với cấu trúc báo cáo rõ ràng.',
+      en: 'A weather tracker built for collecting and organizing weather data with a clean reporting structure.',
+      vi: 'Dự án theo dõi thời tiết dùng để thu thập và tổ chức dữ liệu thời tiết với cấu trúc báo cáo rõ ràng.',
     },
-    stack: ['Python', 'API', 'Data Processing'],
+    stack: ['Python', 'API', 'Data Processing', 'Reporting'],
     role: 'Developer',
     status: 'Built',
     type: 'Data Project',
@@ -125,10 +141,10 @@ export const projects = [
   {
     title: 'Portfolio Interface',
     description: {
-      en: 'An artistic portfolio interface with theme switching, background modes, and a polished three-reel control.',
-      vi: 'Giao diện portfolio nghệ thuật với chuyển đổi chủ đề, chế độ nền và điều khiển ba cuộn tinh chỉnh.',
+      en: 'A technology portfolio interface with theme switching, signal backgrounds, and a custom 3D slot machine.',
+      vi: 'Giao diện portfolio công nghệ với chuyển đổi chủ đề, nền tín hiệu và máy slot 3D được thiết kế riêng.',
     },
-    stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Product Narrative'],
     role: 'Designer & Frontend Developer',
     status: 'In Progress',
     type: 'Personal Website',
@@ -142,7 +158,7 @@ export const projects = [
       en: 'An Excel VBA automation tool for searching, extracting, and exporting student records.',
       vi: 'Công cụ tự động Excel VBA để tìm kiếm, trích xuất và xuất hồ sơ sinh viên.',
     },
-    stack: ['Excel VBA', 'Data Processing'],
+    stack: ['Excel VBA', 'Data Processing', 'Workflow Automation'],
     role: 'Developer',
     status: 'Built',
     type: 'Automation Tool',
@@ -154,21 +170,28 @@ export const projects = [
 
 export const timeline = [
   {
-    period: '2024 — Present',
-    title: 'Frontend & Web Development',
+    period: '2024 - Present',
+    title: 'Frontend & Product Interface',
     description:
-      'Building web interfaces, dashboards, and portfolio projects with React, Tailwind, and modern UI patterns.',
-    tags: ['React', 'UI', 'Frontend'],
+      'Building web interfaces, dashboards, and portfolio systems with React, Tailwind, motion, and structured user flows.',
+    tags: ['React', 'UI', 'Frontend', 'User Flow'],
   },
   {
-    period: '2024 — Present',
+    period: '2024 - Present',
+    title: 'BA / PM / PO Direction',
+    description:
+      'Practicing requirement analysis, backlog structure, acceptance criteria, scope control, and delivery planning.',
+    tags: ['BA', 'PM', 'PO', 'Backlog'],
+  },
+  {
+    period: '2024 - Present',
     title: 'Database & Backend Practice',
     description:
       'Working with ASP.NET Core, Oracle, SQL Server, and structured backend workflows.',
     tags: ['ASP.NET Core', 'Oracle', 'SQL'],
   },
   {
-    period: '2023 — Present',
+    period: '2023 - Present',
     title: 'Automation & Data Tools',
     description:
       'Creating Excel VBA tools for data extraction, validation, and workflow automation.',
@@ -215,14 +238,17 @@ export const contactCards = [
 ];
 
 export const commandStats = [
-  { label: 'Latency', value: '24ms' },
-  { label: 'Uptime', value: '99.9%' },
-  { label: 'Modules', value: '05' },
+  { label: 'REQ', value: 'Mapped' },
+  { label: 'Flow', value: 'Clear' },
+  { label: 'Scope', value: 'Lean' },
   { label: 'Mode', value: 'Build' },
 ];
 
 export const orbitNodes = [
   { label: 'UI', icon: Boxes },
+  { label: 'BA', icon: ClipboardCheck },
+  { label: 'PM', icon: GitPullRequestArrow },
+  { label: 'PO', icon: Presentation },
   { label: 'API', icon: TerminalSquare },
   { label: 'DB', icon: Database },
 ];

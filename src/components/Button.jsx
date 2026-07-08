@@ -11,7 +11,7 @@ export function Button({ children, href, variant = 'primary', icon = true }) {
   return (
     <a
       href={href}
-      className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-sm font-semibold transition duration-300 ${styles[variant]}`}
+      className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-[12px] border px-5 text-sm font-semibold transition duration-300 ${styles[variant]}`}
     >
       <span>{children}</span>
       {icon && (

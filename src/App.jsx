@@ -13,11 +13,12 @@ import { useReducedMotionPreference } from './hooks/useReducedMotionPreference';
 import { LanguageProvider } from './context/LanguageContext';
 import { translations } from './data/i18n';
 
+const backgroundModes = ['orbit', 'solar'];
+
 export default function App() {
   const [theme, setTheme] = useLocalStorage('portfolio-theme', 'dark');
   const [backgroundMode, setBackgroundMode] = useLocalStorage('portfolio-background', 'orbit');
-  const [motionMode, setMotionMode] = useLocalStorage('portfolio-motion', 'normal');
-  const [language, setLanguage] = useLocalStorage('portfolio-language', 'en');
+  const [language, setLanguage] = useLocalStorage('portfolio-language', 'vi');
   const reduceMotion = useReducedMotionPreference();
   const labels = translations[language] || translations.en;
 
@@ -28,16 +29,20 @@ export default function App() {
     root.lang = language;
   }, [theme, language]);
 
+  useEffect(() => {
+    if (!backgroundModes.includes(backgroundMode)) {
+      setBackgroundMode('orbit');
+    }
+  }, [backgroundMode, setBackgroundMode]);
+
   return (
     <LanguageProvider value={{ language, setLanguage, labels }}>
-      <BackgroundSystem mode={backgroundMode} motionLevel={motionMode} reduceMotion={reduceMotion} />
+      <BackgroundSystem mode={backgroundMode} reduceMotion={reduceMotion} />
       <AppearancePanel
         theme={theme}
         onThemeChange={setTheme}
         backgroundMode={backgroundMode}
         onBackgroundChange={setBackgroundMode}
-        motionMode={motionMode}
-        onMotionChange={setMotionMode}
         language={language}
         onLanguageChange={setLanguage}
       />
@@ -51,8 +56,8 @@ export default function App() {
           <Experience />
           <Contact />
         </main>
-        <footer className="mx-auto max-w-7xl px-4 pb-8 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
-          Built as a high-end creative tech interface portfolio.
+        <footer className="mx-auto max-w-7xl px-4 pb-8 text-center font-mono text-xs uppercase tracking-[0.2em] text-slate-500 sm:px-6 lg:px-8">
+          Nguyễn Ngọc Trinh / Creative technology portfolio
         </footer>
       </div>
     </LanguageProvider>

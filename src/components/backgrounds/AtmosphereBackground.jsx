@@ -5,7 +5,7 @@ export function AtmosphereBackground({ safeReduce, motionProps }) {
     <>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.88),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.12),transparent_20%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(4,12,24,0.95),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.08),transparent_20%)]" />
       <motion.div
-        className="absolute left-[-12%] top-8 h-96 w-96 rounded-full bg-cyan/14 blur-[8rem]"
+        className="absolute left-[-12%] top-8 h-96 w-96 rounded-full bg-cyan/15 blur-[8rem]"
         animate={safeReduce ? undefined : { x: [0, 24, -18, 0], y: [0, -16, 14, 0], opacity: [0.95, 0.75, 0.95] }}
         transition={motionProps}
       />
@@ -15,7 +15,7 @@ export function AtmosphereBackground({ safeReduce, motionProps }) {
         transition={motionProps}
       />
       <motion.div
-        className="absolute left-[14%] top-[54%] h-72 w-72 rounded-full bg-amber/12 blur-[7rem]"
+        className="absolute left-[14%] top-[54%] h-72 w-72 rounded-full bg-amber-400/10 blur-[7rem]"
         animate={safeReduce ? undefined : { x: [0, -18, 18, 0], y: [0, 12, -12, 0], opacity: [0.88, 0.6, 0.88] }}
         transition={motionProps}
       />

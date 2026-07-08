@@ -9,7 +9,7 @@ export function Section({ id, eyebrow, title, children, className = '' }) {
   return (
     <motion.section
       id={id}
-      className={`relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 ${className}`}
+      className={`relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16 ${className}`}
       variants={reveal}
       initial="hidden"
       whileInView="visible"
